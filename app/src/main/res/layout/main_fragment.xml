@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="#eee"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical">
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/qr"/>
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+        <View
+            android:id="@+id/tolistings"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/listings_icon" />
+        <TextView
+            android:layout_margin="10dp"
+            android:text="MB"
+            android:textColor="#ffff"
+            android:gravity="center"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/avatar"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+        <EditText
+            android:imeOptions="actionDone"
+            android:hint="Search a Book"
+            android:textColorHint="#4d454545"
+            android:id="@+id/searchQuery"
+            android:layout_width="330dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center_horizontal"
+            android:autofillHints="Search Book"
+            android:background="@drawable/searchbox"
+            android:inputType="text"
+            android:paddingHorizontal="10dp"
+            android:textColor="@color/black"
+            android:textCursorDrawable="@drawable/cursor"
+            tools:ignore="LabelFor,SpeakableTextPresentCheck"
+            android:layout_marginStart="10dp"
+            android:paddingStart="10dp"/>
+        <Button
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/search"
+            android:textColor="#ffff"
+            android:textStyle="bold"
+            android:background="@drawable/search"
+            android:layout_marginHorizontal="10dp"/>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/grid"
+        android:layout_marginTop="20dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center">
+            <TextView
+                android:id="@+id/emptyText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Search some book"
+                android:textColor="@color/black"
+                android:gravity="center"
+                tools:ignore="HardcodedText" />
+            <ImageView
+                android:id="@+id/emptyImg"
+                android:contentDescription="Search image"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:src="@drawable/search_ill"
+                tools:ignore="HardcodedText"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="20dp"/>
+        </LinearLayout>
+
+        <GridView
+            android:padding="20dp"
+            android:id="@+id/bookGrid"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp"
+            android:horizontalSpacing="8dp"
+            android:numColumns="2"
+            android:scrollbarSize="10dp"
+            android:scrollbarStyle="outsideOverlay"
+            android:scrollbarThumbVertical="@drawable/scrollbarthumb"
+            android:scrollbars="vertical"
+            android:verticalSpacing="10dp" />
+    </RelativeLayout>
+</LinearLayout>
